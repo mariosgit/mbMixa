@@ -8908,8 +8908,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <attribute name="SPICEPREFIX" value="J"/>
 </part>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="ATT_0" library="og-pots" deviceset="POT_US_2X" device="" value="20k"/>
-<part name="JP1" library="og-header" deviceset="M05X2" device="SMD">
+<part name="ATT_0" library="og-pots" deviceset="POT_US_2X" device="" override_package3d_urn="urn:adsk.eagle:package:21725172/2" override_package_urn="urn:adsk.eagle:footprint:21725173/1" value="20k"/>
+<part name="JP1" library="og-header" deviceset="M05X2" device="SMD" override_package3d_urn="urn:adsk.eagle:package:21725182/2" override_package_urn="urn:adsk.eagle:footprint:21725183/1">
 <attribute name="MOUSER" value="855-M20-8750542"/>
 </part>
 <part name="VSS2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
@@ -9003,7 +9003,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="GND33" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IN1L5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
-<part name="IN1R5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
+<part name="IN1R5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6" override_package3d_urn="urn:adsk.eagle:package:21725193/2" override_package_urn="urn:adsk.eagle:footprint:21725194/1"/>
 <part name="ATT_5" library="og-pots" deviceset="POT_US_2X" device="" value="20k"/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
@@ -10028,6 +10028,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
