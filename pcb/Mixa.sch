@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8904,11 +8904,14 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="IN1L0" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
 <part name="IN1R0" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
 <part name="OPAMP_IS" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL074" device="D" package3d_urn="urn:adsk.eagle:package:16406/2">
+<attribute name="MOUSER" value="595-TL074IDR"/>
 <attribute name="SPICEPREFIX" value="J"/>
 </part>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="ATT_0" library="og-pots" deviceset="POT_US_2X" device="" value="20k"/>
-<part name="JP1" library="og-header" deviceset="M05X2" device="SMD"/>
+<part name="ATT_0" library="og-pots" deviceset="POT_US_2X" device="" override_package3d_urn="urn:adsk.eagle:package:21725172/2" override_package_urn="urn:adsk.eagle:footprint:21725173/1" value="20k"/>
+<part name="JP1" library="og-header" deviceset="M05X2" device="SMD" override_package3d_urn="urn:adsk.eagle:package:21725182/2" override_package_urn="urn:adsk.eagle:footprint:21725183/1">
+<attribute name="MOUSER" value="855-M20-8750542"/>
+</part>
 <part name="VSS2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VDD2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8916,11 +8919,29 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VSS3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VDD3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value=".1u"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value=".1u">
+<spice>
+<pinmapping spiceprefix="C">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="710-885012206071"/>
+</part>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value=".1u"/>
-<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22u"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22u">
+<spice>
+<pinmapping spiceprefix="C">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="810-C3225X7R1C226M"/>
+</part>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="22u"/>
-<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="CGRM400*-G" device="" package3d_urn="urn:adsk.eagle:package:43457/2" technology="2"/>
+<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="CGRM400*-G" device="" package3d_urn="urn:adsk.eagle:package:43457/2" technology="2">
+<attribute name="MOUSER" value="621-B130-F"/>
+</part>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="CGRM400*-G" device="" package3d_urn="urn:adsk.eagle:package:43457/2" technology="2"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
@@ -8929,7 +8950,15 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="VDD1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VDD4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
-<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
+<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k">
+<spice>
+<pinmapping spiceprefix="R">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="667-ERJ-3RBD2202V"/>
+</part>
 <part name="SEND_R" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
 <part name="SEND_L" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
 <part name="SEND_LR" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
@@ -8941,7 +8970,9 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IN1L1" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
 <part name="IN1R1" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
-<part name="ATT_1" library="og-pots" deviceset="POT_US_2X" device="" value="20k"/>
+<part name="ATT_1" library="og-pots" deviceset="POT_US_2X" device="" value="20k">
+<attribute name="MOUSER" value="688-RK09L12D0A1W"/>
+</part>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8972,20 +9003,44 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="GND33" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="IN1L5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
-<part name="IN1R5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6"/>
+<part name="IN1R5" library="og-pj301" deviceset="PJ301_THONKICONN" device="6" override_package3d_urn="urn:adsk.eagle:package:21725193/2" override_package_urn="urn:adsk.eagle:footprint:21725194/1"/>
 <part name="ATT_5" library="og-pots" deviceset="POT_US_2X" device="" value="20k"/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
+<part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100">
+<spice>
+<pinmapping spiceprefix="R">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="710-885012109014"/>
+</part>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="22k"/>
-<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
+<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k">
+<spice>
+<pinmapping spiceprefix="R">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="667-ERJ-3RBD104V"/>
+</part>
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
-<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100p"/>
+<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100p">
+<spice>
+<pinmapping spiceprefix="C">
+<pinmap gate="G$1" pin="1" pinorder="1"/>
+<pinmap gate="G$1" pin="2" pinorder="2"/>
+</pinmapping>
+</spice>
+<attribute name="MOUSER" value="710-885012206077"/>
+</part>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100p"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9030,6 +9085,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="R14" gate="G$1" x="129.54" y="116.84" smashed="yes">
 <attribute name="NAME" x="125.73" y="118.3386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="125.73" y="113.538" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="129.54" y="116.84" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="SEND_R" gate="G$1" x="195.58" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="198.12" y="80.264" size="1.778" layer="95" rot="MR0"/>
@@ -9044,6 +9100,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND17" gate="1" x="200.66" y="55.88" smashed="yes"/>
 <instance part="OPAMP_IS" gate="A" x="129.54" y="106.68" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="124.968" y="100.838" size="1.778" layer="96" rot="MR180"/>
+<attribute name="MOUSER" x="129.54" y="106.68" size="1.778" layer="96" rot="MR180" display="off"/>
 </instance>
 <instance part="GND22" gate="1" x="200.66" y="68.58" smashed="yes"/>
 <instance part="GND23" gate="1" x="200.66" y="91.44" smashed="yes"/>
@@ -9058,6 +9115,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="ATT_1" gate="G$1" x="40.64" y="109.22" smashed="yes" rot="MR270">
 <attribute name="NAME" x="43.18" y="114.3" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="43.18" y="111.76" size="1.778" layer="96" rot="MR0"/>
+<attribute name="MOUSER" x="40.64" y="109.22" size="1.778" layer="96" rot="MR270" display="off"/>
 </instance>
 <instance part="R3" gate="G$1" x="58.42" y="101.6" smashed="yes">
 <attribute name="NAME" x="54.61" y="103.0986" size="1.778" layer="95"/>
@@ -9157,6 +9215,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="R17" gate="G$1" x="213.36" y="101.6" smashed="yes">
 <attribute name="NAME" x="209.55" y="103.0986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="209.55" y="98.298" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="213.36" y="101.6" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="R19" gate="G$1" x="213.36" y="78.74" smashed="yes">
 <attribute name="NAME" x="209.55" y="80.2386" size="1.778" layer="95"/>
@@ -9185,6 +9244,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="R18" gate="G$1" x="205.74" y="144.78" smashed="yes">
 <attribute name="NAME" x="201.93" y="146.2786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="201.93" y="141.478" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="205.74" y="144.78" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="R20" gate="G$1" x="205.74" y="125.984" smashed="yes">
 <attribute name="NAME" x="201.93" y="127.4826" size="1.778" layer="95"/>
@@ -9193,6 +9253,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="C5" gate="G$1" x="198.12" y="152.4" smashed="yes" rot="R270">
 <attribute name="NAME" x="198.501" y="150.876" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="193.421" y="150.876" size="1.778" layer="96" rot="R270"/>
+<attribute name="MOUSER" x="198.12" y="152.4" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="C6" gate="G$1" x="198.12" y="129.54" smashed="yes" rot="R270">
 <attribute name="NAME" x="198.501" y="128.016" size="1.778" layer="95" rot="R270"/>
@@ -9786,6 +9847,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="JP1" gate="G$1" x="20.32" y="15.24" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="17.78" y="25.4" size="1.778" layer="96" rot="MR180"/>
 <attribute name="NAME" x="17.78" y="6.858" size="1.778" layer="95" rot="MR180"/>
+<attribute name="MOUSER" x="20.32" y="15.24" size="1.778" layer="96" rot="MR180" display="off"/>
 </instance>
 <instance part="VSS2" gate="G$1" x="38.1" y="7.62" smashed="yes">
 <attribute name="VALUE" x="35.56" y="2.54" size="1.778" layer="96" rot="R90"/>
@@ -9808,6 +9870,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="C1" gate="G$1" x="17.78" y="53.34" smashed="yes">
 <attribute name="NAME" x="19.304" y="53.721" size="1.778" layer="95"/>
 <attribute name="VALUE" x="19.304" y="48.641" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="17.78" y="53.34" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C2" gate="G$1" x="17.78" y="43.18" smashed="yes">
 <attribute name="NAME" x="19.304" y="43.561" size="1.778" layer="95"/>
@@ -9816,6 +9879,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="C3" gate="G$1" x="25.4" y="53.34" smashed="yes">
 <attribute name="NAME" x="26.924" y="53.721" size="1.778" layer="95"/>
 <attribute name="VALUE" x="26.924" y="48.641" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="25.4" y="53.34" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C4" gate="G$1" x="25.4" y="43.18" smashed="yes">
 <attribute name="NAME" x="26.924" y="43.561" size="1.778" layer="95"/>
@@ -9824,6 +9888,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="D2" gate="G$1" x="33.02" y="20.32" smashed="yes">
 <attribute name="NAME" x="35.56" y="20.8026" size="1.778" layer="95"/>
 <attribute name="VALUE" x="35.56" y="18.0086" size="1.778" layer="96"/>
+<attribute name="MOUSER" x="33.02" y="20.32" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="D3" gate="G$1" x="33.02" y="10.16" smashed="yes" rot="R180">
 <attribute name="NAME" x="30.48" y="9.6774" size="1.778" layer="95" rot="R180"/>
@@ -9973,6 +10038,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
