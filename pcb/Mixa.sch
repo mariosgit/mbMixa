@@ -8987,6 +8987,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100k"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100p"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100p"/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8995,6 +8997,9 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <text x="12.7" y="137.16" size="1.778" layer="97">In den rechten kann man auch nen stereo plug rein machen.</text>
 <text x="12.7" y="134.62" size="1.778" layer="97">Dann is verdreht aber naja...</text>
 <text x="208.28" y="149.86" size="1.778" layer="91">v=4</text>
+<text x="177.8" y="165.1" size="1.778" layer="98">v0.1 bug</text>
+<text x="177.8" y="162.56" size="1.778" layer="98">- feedback needs to go to - input</text>
+<text x="177.8" y="160.02" size="1.778" layer="98">- GND @ + input</text>
 </plain>
 <instances>
 <instance part="IN1L0" gate="G$1" x="17.78" y="162.56" smashed="yes" rot="MR0">
@@ -9193,6 +9198,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <attribute name="NAME" x="198.501" y="128.016" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="193.421" y="128.016" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="GND4" gate="1" x="180.34" y="116.84" smashed="yes"/>
+<instance part="GND5" gate="1" x="180.34" y="137.16" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -9330,6 +9337,16 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <pinref part="ATT_5" gate="G$1" pin="CCW"/>
 <wire x1="139.7" y1="-15.24" x2="139.7" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="139.7" y="-15.24"/>
+</segment>
+<segment>
+<pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="OPAMP_IS" gate="C" pin="+IN"/>
+<wire x1="180.34" y1="139.7" x2="182.88" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="OPAMP_IS" gate="D" pin="+IN"/>
+<wire x1="180.34" y1="119.38" x2="182.88" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -9730,40 +9747,33 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="OPAMP_IS" gate="C" pin="+IN"/>
-<wire x1="182.88" y1="139.7" x2="182.88" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="144.78" x2="200.66" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="144.78" x2="182.88" y2="152.4" width="0.1524" layer="91"/>
-<junction x="182.88" y="144.78"/>
+<wire x1="177.8" y1="144.78" x2="200.66" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="144.78" x2="177.8" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="182.88" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<pinref part="OPAMP_IS" gate="C" pin="-IN"/>
+<wire x1="175.26" y1="134.62" x2="177.8" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="134.62" x2="182.88" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="144.78" x2="177.8" y2="134.62" width="0.1524" layer="91"/>
+<junction x="177.8" y="144.78"/>
+<junction x="177.8" y="134.62"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="OPAMP_IS" gate="D" pin="+IN"/>
-<wire x1="182.88" y1="119.38" x2="182.88" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="124.46" x2="182.88" y2="125.984" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="125.984" x2="182.88" y2="125.984" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="125.984" x2="177.8" y2="125.984" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="129.54" x2="182.88" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="129.54" x2="182.88" y2="125.984" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
+<wire x1="193.04" y1="129.54" x2="177.8" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="129.54" x2="177.8" y2="125.984" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="OPAMP_IS" gate="D" pin="-IN"/>
-<wire x1="175.26" y1="114.3" x2="182.88" y2="114.3" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="R15" gate="G$1" pin="2"/>
-<pinref part="OPAMP_IS" gate="C" pin="-IN"/>
-<wire x1="175.26" y1="134.62" x2="182.88" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="114.3" x2="177.8" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="114.3" x2="182.88" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="125.984" x2="177.8" y2="114.3" width="0.1524" layer="91"/>
+<junction x="177.8" y="114.3"/>
 </segment>
 </net>
 </nets>
